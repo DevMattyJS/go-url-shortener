@@ -5,21 +5,6 @@ import (
 	"os"
 )
 
-func runApp() {
-	const appName = "URL Shortener CLI"
-	var alias string
-	fullURL := ""
-
-	fmt.Println(appName)
-	fmt.Print("Please enter an alias for your URL: ")
-	_, _ = fmt.Scanln(&alias)
-
-	fmt.Print("Please enter the full URL: ")
-	_, _ = fmt.Scanln(&fullURL)
-
-	fmt.Printf("Saved URL for %s: %s\n", alias, fullURL)
-}
-
 func main() {
 
 	if len(os.Args) < 2 {
@@ -36,4 +21,19 @@ func main() {
 	default:
 		fmt.Printf("Unknown command: %s\n", command)
 	}
+}
+
+func runApp() {
+	const appName = "URL Shortener CLI"
+	var alias string
+	fullURL := ""
+
+	fmt.Println(appName)
+	fmt.Print("Please enter an alias for your URL: ")
+	_, _ = fmt.Scanln(&alias)
+
+	fmt.Print("Please enter the full URL: ")
+	_, _ = fmt.Scanln(&fullURL)
+
+	fmt.Printf("Saved URL for %s: %s\n", alias, fullURL)
 }
